@@ -1,0 +1,44 @@
+{
+  "name": "yamaps",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.1",
+    "react-native-gesture-handler": "^1.5.2",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-screens": "^1.0.0-alpha.23",
+    "react-native-yamap": "./react-native-yamap",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.8.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/runtime": "^7.7.6",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.9.35",
+    "@types/react-native": "^0.62.11",
+    "@types/react-test-renderer": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "2.17.0",
+    "@typescript-eslint/parser": "2.17.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.2",
+    "eslint-config-vvdev-rn": "1.0.6",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.57.0",
+    "react-test-renderer": "16.9.0",
+    "typescript": "^3.9.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

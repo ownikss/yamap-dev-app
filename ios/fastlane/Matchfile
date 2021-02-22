@@ -1,0 +1,5 @@
+git_url "https://git.tabolabs.com/dev/ios_cert.git"
+type "development"
+clone_branch_directly true
+git_branch "sorted"
+app_identifier "com.sorted.featuretest"

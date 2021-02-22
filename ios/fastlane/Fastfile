@@ -1,0 +1,24 @@
+default_platform :ios
+
+#https://docs.fastlane.tools/best-practices/continuous-integration/#application-specific-passwords
+ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "app specific пароль для загрузки приложения в appstoreconnect"
+
+ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t DAV"
+
+platform :ios do
+    lane :reg_dev do
+        register_devices(
+          devices: {
+            "Имя устройства (например Nikita 6s)" => "UDID устройства"
+          }
+        )
+    end
+    lane :build do
+        gym(scheme: 'имя схемы приложения')
+    end
+
+    lane :deploy do
+        build
+        pilot(skip_waiting_for_build_processing: true, username: "appleid для загрузки")
+    end
+end
